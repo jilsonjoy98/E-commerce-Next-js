@@ -7,6 +7,27 @@
     "category": "Electronics",
     "tag": "Audio",
     "base_price": 199.99,
+    "featured": true,
+    "rating": {
+      "rate": 4.8,
+      "count": 342
+    },
+    "reviews": [
+      {
+        "id": "rev_001_1",
+        "user": "Marcus Vance",
+        "rating": 5,
+        "date": "2026-09-14",
+        "comment": "Incredible noise cancellation. The battery easily lasted an entire week of work and travel."
+      },
+      {
+        "id": "rev_001_2",
+        "user": "Elena Rostova",
+        "rating": 4,
+        "date": "2026-10-02",
+        "comment": "Soundstage is crisp with punchy bass. A bit snug on the ears after 4 hours straight."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -46,6 +67,27 @@
     "category": "Electronics",
     "tag": "Power",
     "base_price": 34.99,
+    "featured": false,
+    "rating": {
+      "rate": 4.6,
+      "count": 185
+    },
+    "reviews": [
+      {
+        "id": "rev_002_1",
+        "user": "David Kim",
+        "rating": 5,
+        "date": "2026-08-19",
+        "comment": "Charges my laptop and phone simultaneously without heating up. Compact design is perfect for travel."
+      },
+      {
+        "id": "rev_002_2",
+        "user": "Sarah Miller",
+        "rating": 4,
+        "date": "2026-09-11",
+        "comment": "Very solid build quality. A slightly tighter wall-plug fit would make it perfect."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -85,6 +127,27 @@
     "category": "Electronics",
     "tag": "Audio",
     "base_price": 79.99,
+    "featured": false,
+    "rating": {
+      "rate": 4.5,
+      "count": 210
+    },
+    "reviews": [
+      {
+        "id": "rev_003_1",
+        "user": "Carlos Mendez",
+        "rating": 5,
+        "date": "2026-07-29",
+        "comment": "Took it camping and survived rain and dirt without an issue. Surprisingly deep bass for its footprint."
+      },
+      {
+        "id": "rev_003_2",
+        "user": "Chloe Bennett",
+        "rating": 4,
+        "date": "2026-08-15",
+        "comment": "Great sound clarity at medium volume, though highs distort slightly at maximum output."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -124,6 +187,27 @@
     "category": "Electronics",
     "tag": "Wearables",
     "base_price": 179.0,
+    "featured": true,
+    "rating": {
+      "rate": 4.7,
+      "count": 420
+    },
+    "reviews": [
+      {
+        "id": "rev_004_1",
+        "user": "Ananya Sharma",
+        "rating": 5,
+        "date": "2026-09-08",
+        "comment": "The AMOLED screen is readable even under direct sunlight. Multi-system GPS locks within seconds."
+      },
+      {
+        "id": "rev_004_2",
+        "user": "Liam O'Connor",
+        "rating": 4,
+        "date": "2026-10-10",
+        "comment": "Great metrics tracking and sleep analysis. Companion app sync could be faster."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -163,6 +247,27 @@
     "category": "Electronics",
     "tag": "Peripherals",
     "base_price": 119.0,
+    "featured": true,
+    "rating": {
+      "rate": 4.9,
+      "count": 512
+    },
+    "reviews": [
+      {
+        "id": "rev_005_1",
+        "user": "Jason Patel",
+        "rating": 5,
+        "date": "2026-08-25",
+        "comment": "Pre-lubed switches feel exceptionally smooth. The factory sound damping provides an awesome deep thock."
+      },
+      {
+        "id": "rev_005_2",
+        "user": "Samantha Wu",
+        "rating": 5,
+        "date": "2026-09-18",
+        "comment": "Flawless Bluetooth and 2.4GHz switching between my Mac and Windows rig. Keycaps feel premium."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -202,6 +307,27 @@
     "category": "Electronics",
     "tag": "Peripherals",
     "base_price": 64.99,
+    "featured": false,
+    "rating": {
+      "rate": 4.4,
+      "count": 164
+    },
+    "reviews": [
+      {
+        "id": "rev_006_1",
+        "user": "Brian Scott",
+        "rating": 5,
+        "date": "2026-08-04",
+        "comment": "Completely cured my repetitive strain wrist pain after two days of adapting to the angle."
+      },
+      {
+        "id": "rev_006_2",
+        "user": "Nora Lindqvist",
+        "rating": 4,
+        "date": "2026-09-02",
+        "comment": "Comfortable textured finish, though thumb buttons take a little getting used to."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -232,6 +358,27 @@
     "category": "Electronics",
     "tag": "Video",
     "base_price": 129.99,
+    "featured": true,
+    "rating": {
+      "rate": 4.6,
+      "count": 278
+    },
+    "reviews": [
+      {
+        "id": "rev_007_1",
+        "user": "Tara Jenkins",
+        "rating": 5,
+        "date": "2026-07-22",
+        "comment": "Sharp image even in low lighting conditions. The physical privacy slider is a reassuring touch."
+      },
+      {
+        "id": "rev_007_2",
+        "user": "Felix Meyer",
+        "rating": 4,
+        "date": "2026-09-17",
+        "comment": "Super crisp 4K stream for presentations. The auto-framing occasionally readjusts too eagerly."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -262,6 +409,27 @@
     "category": "Electronics",
     "tag": "Power",
     "base_price": 49.99,
+    "featured": false,
+    "rating": {
+      "rate": 4.3,
+      "count": 196
+    },
+    "reviews": [
+      {
+        "id": "rev_008_1",
+        "user": "Zoe Kravitz",
+        "rating": 5,
+        "date": "2026-08-30",
+        "comment": "The magnetic snap is solid and doesn't slip off. The built-in kickstand is great for video calls."
+      },
+      {
+        "id": "rev_008_2",
+        "user": "Kevin Torres",
+        "rating": 4,
+        "date": "2026-10-04",
+        "comment": "Delivers about 1.8 full charges on my phone. Slightly heavy in pockets, but worth the battery size."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1609592424368-23c8990d1e57?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -301,6 +469,27 @@
     "category": "Electronics",
     "tag": "Audio",
     "base_price": 89.99,
+    "featured": false,
+    "rating": {
+      "rate": 4.5,
+      "count": 310
+    },
+    "reviews": [
+      {
+        "id": "rev_009_1",
+        "user": "Rachel Green",
+        "rating": 5,
+        "date": "2026-07-14",
+        "comment": "They stay completely secure during interval sprints. The transparency mode sounds very natural."
+      },
+      {
+        "id": "rev_009_2",
+        "user": "Daniel Lee",
+        "rating": 4,
+        "date": "2026-09-29",
+        "comment": "Great sound balance and ANC performance. Wireless charging case takes around two hours."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -331,6 +520,27 @@
     "category": "Electronics",
     "tag": "Home Tech",
     "base_price": 59.0,
+    "featured": false,
+    "rating": {
+      "rate": 4.7,
+      "count": 145
+    },
+    "reviews": [
+      {
+        "id": "rev_010_1",
+        "user": "Emily Watson",
+        "rating": 5,
+        "date": "2026-08-11",
+        "comment": "Even illumination across my entire workbench without screen glare. The color temperatures are spot on."
+      },
+      {
+        "id": "rev_010_2",
+        "user": "Arjun Nair",
+        "rating": 4,
+        "date": "2026-09-23",
+        "comment": "Minimalist look and the capacitive dimmer slide is very responsive. Base is quite heavy."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -370,6 +580,27 @@
     "category": "Toys",
     "tag": "STEM",
     "base_price": 79.99,
+    "featured": true,
+    "rating": {
+      "rate": 4.8,
+      "count": 230
+    },
+    "reviews": [
+      {
+        "id": "rev_toy_001_1",
+        "user": "Greg Harris",
+        "rating": 5,
+        "date": "2026-08-16",
+        "comment": "Bought this for my 10-year-old daughter. The block-coding app made learning logic easy and engaging."
+      },
+      {
+        "id": "rev_toy_001_2",
+        "user": "Clara Hughes",
+        "rating": 5,
+        "date": "2026-09-04",
+        "comment": "High-quality plastic components and responsive obstacle sensors. Great educational STEM kit."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -400,6 +631,27 @@
     "category": "Toys",
     "tag": "Building Sets",
     "base_price": 44.5,
+    "featured": false,
+    "rating": {
+      "rate": 4.6,
+      "count": 118
+    },
+    "reviews": [
+      {
+        "id": "rev_toy_002_1",
+        "user": "Hannah Brooks",
+        "rating": 5,
+        "date": "2026-07-18",
+        "comment": "Beautiful, splinter-free beechwood with smooth edges. Love the minimalist aesthetic."
+      },
+      {
+        "id": "rev_toy_002_2",
+        "user": "Martin Davis",
+        "rating": 4,
+        "date": "2026-08-28",
+        "comment": "Kids love stacking them into castles. The included canvas storage bag is very convenient."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -430,6 +682,27 @@
     "category": "Toys",
     "tag": "RC Toys",
     "base_price": 39.99,
+    "featured": true,
+    "rating": {
+      "rate": 4.7,
+      "count": 315
+    },
+    "reviews": [
+      {
+        "id": "rev_toy_003_1",
+        "user": "Kyle Walker",
+        "rating": 5,
+        "date": "2026-09-01",
+        "comment": "Altitude hold keeps it steady even for beginners. Took quite a few wall crashes undamaged."
+      },
+      {
+        "id": "rev_toy_003_2",
+        "user": "Leila Adams",
+        "rating": 4,
+        "date": "2026-10-14",
+        "comment": "Super fun indoor drone. Flight time is about 8 minutes, so having modular batteries helps."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -460,6 +733,27 @@
     "category": "Fashion",
     "tag": "Eyewear",
     "base_price": 89.0,
+    "featured": false,
+    "rating": {
+      "rate": 4.4,
+      "count": 92
+    },
+    "reviews": [
+      {
+        "id": "rev_fash_001_1",
+        "user": "Camilla Rossi",
+        "rating": 5,
+        "date": "2026-06-25",
+        "comment": "Frame has substantial weight without pinching the bridge of my nose. Glare reduction is fantastic."
+      },
+      {
+        "id": "rev_fash_001_2",
+        "user": "Brett Collins",
+        "rating": 4,
+        "date": "2026-08-14",
+        "comment": "Classic vintage aesthetic. The Havana tortoise colorway looks even sharper in person."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -490,6 +784,27 @@
     "category": "Fashion",
     "tag": "Bags",
     "base_price": 165.0,
+    "featured": true,
+    "rating": {
+      "rate": 4.9,
+      "count": 164
+    },
+    "reviews": [
+      {
+        "id": "rev_fash_002_1",
+        "user": "Valerie Dupont",
+        "rating": 5,
+        "date": "2026-07-12",
+        "comment": "The leather aroma and woven craftsmanship rival designer bags four times the price. Ample interior space."
+      },
+      {
+        "id": "rev_fash_002_2",
+        "user": "Maya Patel",
+        "rating": 5,
+        "date": "2026-09-09",
+        "comment": "Fits my 14-inch laptop, planner, and water bottle effortlessly. Elegant shoulder drop length."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -520,6 +835,27 @@
     "category": "Fashion",
     "tag": "Accessories",
     "base_price": 48.0,
+    "featured": false,
+    "rating": {
+      "rate": 4.6,
+      "count": 78
+    },
+    "reviews": [
+      {
+        "id": "rev_fash_003_1",
+        "user": "Charlotte Dubois",
+        "rating": 5,
+        "date": "2026-06-19",
+        "comment": "Silky drape with vibrant botanical dyes. Hand-rolled hems give it a tailored finish."
+      },
+      {
+        "id": "rev_fash_003_2",
+        "user": "Evelyn Reed",
+        "rating": 4,
+        "date": "2026-08-03",
+        "comment": "Generous size for either a neck tie or hair accessory. Colors stay rich after gentle hand washing."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -550,6 +886,27 @@
     "category": "Beauty",
     "tag": "Skincare",
     "base_price": 38.0,
+    "featured": true,
+    "rating": {
+      "rate": 4.8,
+      "count": 389
+    },
+    "reviews": [
+      {
+        "id": "rev_bty_001_1",
+        "user": "Jessica Taylor",
+        "rating": 5,
+        "date": "2026-08-17",
+        "comment": "Faded my post-acne marks significantly in 3 weeks. Doesn't leave any sticky residue underneath sunscreen."
+      },
+      {
+        "id": "rev_bty_001_2",
+        "user": "Priya Sen",
+        "rating": 5,
+        "date": "2026-09-21",
+        "comment": "Formula stays clear and doesn't oxidize quickly. Mild tingle on day one, followed by pure glow."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -580,6 +937,27 @@
     "category": "Beauty",
     "tag": "Skincare",
     "base_price": 32.0,
+    "featured": false,
+    "rating": {
+      "rate": 4.7,
+      "count": 254
+    },
+    "reviews": [
+      {
+        "id": "rev_bty_002_1",
+        "user": "Stephanie Chow",
+        "rating": 5,
+        "date": "2026-07-09",
+        "comment": "Rescued my skin barrier after over-exfoliation. Super rich yet absorbs with a natural matte finish."
+      },
+      {
+        "id": "rev_bty_002_2",
+        "user": "Oliver Hansen",
+        "rating": 4,
+        "date": "2026-09-12",
+        "comment": "Fantastic night cream for dry winter days. No added fragrances, which is great for sensitive skin."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {
@@ -610,6 +988,27 @@
     "category": "Beauty",
     "tag": "Fragrance",
     "base_price": 75.0,
+    "featured": false,
+    "rating": {
+      "rate": 4.5,
+      "count": 142
+    },
+    "reviews": [
+      {
+        "id": "rev_bty_003_1",
+        "user": "Lucas Martin",
+        "rating": 5,
+        "date": "2026-08-08",
+        "comment": "Warm, understated, and sophisticated. The cardamom top note transitions into sandalwood beautifully."
+      },
+      {
+        "id": "rev_bty_003_2",
+        "user": "Grace Thornton",
+        "rating": 4,
+        "date": "2026-09-30",
+        "comment": "Lasts about 6 to 7 hours on skin and longer on fabrics. Gets multiple compliments daily."
+      }
+    ],
     "default_image": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80",
     "variants": [
       {

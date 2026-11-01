@@ -1,12 +1,14 @@
-import Categories from '@/components/home/categories/Categories'
-import Promotional from '@/components/home/promotional/Promotional'
-import React from 'react'
+import Categories from '@/components/home/categories/Categories';
+import Featured from '@/components/home/featured/Featured';
+import Promotional from '@/components/home/promotional/Promotional';
+import React from 'react';
 
-export default function page() {
+export default function Page() {
   return (
-    <div>
+    <div className="space-y-6 pb-16">
       <Promotional />
-      <Categories/>
-      </div>
-  )
+      <Categories />
+      <Featured />
+    </div>
+  );
 }
