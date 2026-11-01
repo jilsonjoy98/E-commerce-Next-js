@@ -23,14 +23,15 @@ export default function Navbar() {
             <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
                 {/* 1. Brand Logo */}
                 <Link href="/" className="flex flex-shrink-0 items-center">
-                    <Image
+                    {/* <Image
                         src="/navbar/logo_E-com.png"
                         alt="eShop Logo"
                         width={160}
                         height={160}
                         priority
                         className="h-10 w-auto object-contain"
-                    />
+                    /> */}
+                    <p className="text-2xl font-bold text-white "><span className="text-orange-600">e</span>Shop</p>
                 </Link>
 
                 {/* 2. Desktop Search Bar */}
