@@ -1,0 +1,728 @@
+[
+    {
+        "id": "prod_elec_001",
+        "slug": "aurasound-pro-wireless-headphones",
+        "name": "AuraSound Pro Wireless Headphones",
+        "description": "Over-ear active noise-cancelling headphones equipped with 40mm neodymium drivers and 40-hour playback.",
+        "category": "Electronics",
+        "tag": "Audio",
+        "base_price": 199.99,
+        "default_image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_elec_001_blk",
+                "type": "Standard",
+                "color": "Matte Black",
+                "color_code": "#1a1a1a",
+                "price": 199.99,
+                "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80",
+                "stock": 42
+            },
+            {
+                "id": "var_elec_001_slv",
+                "type": "Standard",
+                "color": "Silver Birch",
+                "color_code": "#e5e7eb",
+                "price": 199.99,
+                "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80",
+                "stock": 25
+            },
+            {
+                "id": "var_elec_001_gld",
+                "type": "Studio Edition",
+                "color": "Champagne Gold",
+                "color_code": "#d4af37",
+                "price": 229.99,
+                "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=600&q=80",
+                "stock": 14
+            }
+        ]
+    },
+    {
+        "id": "prod_elec_002",
+        "slug": "voltflow-gan-fast-wall-charger",
+        "name": "VoltFlow GaN Fast Wall Charger",
+        "description": "Next-gen gallium nitride high-efficiency fast charger compatible with laptops, tablets, and phones.",
+        "category": "Electronics",
+        "tag": "Power",
+        "base_price": 34.99,
+        "default_image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_elec_002_65w_wht",
+                "type": "65W Dual Port",
+                "color": "Glacier White",
+                "color_code": "#ffffff",
+                "price": 34.99,
+                "image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80",
+                "stock": 70
+            },
+            {
+                "id": "var_elec_002_65w_blk",
+                "type": "65W Dual Port",
+                "color": "Stealth Black",
+                "color_code": "#111827",
+                "price": 34.99,
+                "image": "https://images.unsplash.com/photo-1622445268045-8e7c10d32bb5?auto=format&fit=crop&w=600&q=80",
+                "stock": 55
+            },
+            {
+                "id": "var_elec_002_100w_blk",
+                "type": "100W Triple Port",
+                "color": "Stealth Black",
+                "color_code": "#111827",
+                "price": 54.99,
+                "image": "https://images.unsplash.com/photo-1622445268045-8e7c10d32bb5?auto=format&fit=crop&w=600&q=80",
+                "stock": 30
+            }
+        ]
+    },
+    {
+        "id": "prod_elec_003",
+        "slug": "pulse-hifi-portable-bluetooth-speaker",
+        "name": "Pulse Hi-Fi Portable Bluetooth Speaker",
+        "description": "IP67 waterproof compact outdoor speaker featuring 360-degree sound projection and built-in passive radiators.",
+        "category": "Electronics",
+        "tag": "Audio",
+        "base_price": 79.99,
+        "default_image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_elec_003_blk",
+                "type": "Compact",
+                "color": "Midnight Black",
+                "color_code": "#171717",
+                "price": 79.99,
+                "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80",
+                "stock": 60
+            },
+            {
+                "id": "var_elec_003_blu",
+                "type": "Compact",
+                "color": "Ocean Teal",
+                "color_code": "#0d9488",
+                "price": 79.99,
+                "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=600&q=80",
+                "stock": 38
+            },
+            {
+                "id": "var_elec_003_red",
+                "type": "Compact",
+                "color": "Sunset Coral",
+                "color_code": "#f43f5e",
+                "price": 79.99,
+                "image": "https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fit=crop&w=600&q=80",
+                "stock": 20
+            }
+        ]
+    },
+    {
+        "id": "prod_elec_004",
+        "slug": "chronos-active-smartwatch",
+        "name": "Chronos Active Smartwatch",
+        "description": "Fitness tracking smartwatch with 1.4-inch AMOLED display, heart rate monitor, and built-in multi-system GPS.",
+        "category": "Electronics",
+        "tag": "Wearables",
+        "base_price": 179.00,
+        "default_image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_elec_004_sil_gry",
+                "type": "Silicone Strap",
+                "color": "Slate Grey",
+                "color_code": "#64748b",
+                "price": 179.00,
+                "image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=600&q=80",
+                "stock": 45
+            },
+            {
+                "id": "var_elec_004_sil_blk",
+                "type": "Silicone Strap",
+                "color": "Space Black",
+                "color_code": "#020617",
+                "price": 179.00,
+                "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=600&q=80",
+                "stock": 50
+            },
+            {
+                "id": "var_elec_004_lea_brn",
+                "type": "Leather Strap",
+                "color": "Chestnut Brown",
+                "color_code": "#78350f",
+                "price": 209.00,
+                "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80",
+                "stock": 18
+            }
+        ]
+    },
+    {
+        "id": "prod_elec_005",
+        "slug": "apexkey-mechanical-keyboard",
+        "name": "ApexKey Wireless Mechanical Keyboard",
+        "description": "75% compact hot-swappable mechanical keyboard featuring RGB backlighting and PBT keycaps.",
+        "category": "Electronics",
+        "tag": "Peripherals",
+        "base_price": 119.00,
+        "default_image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_elec_005_red_blk",
+                "type": "Linear Red Switch",
+                "color": "Cyber Dark",
+                "color_code": "#18181b",
+                "price": 119.00,
+                "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
+                "stock": 32
+            },
+            {
+                "id": "var_elec_005_brn_wht",
+                "type": "Tactile Brown Switch",
+                "color": "Retro White",
+                "color_code": "#f4f4f5",
+                "price": 119.00,
+                "image": "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=600&q=80",
+                "stock": 28
+            },
+            {
+                "id": "var_elec_005_blu_gry",
+                "type": "Clicky Blue Switch",
+                "color": "Industrial Grey",
+                "color_code": "#71717a",
+                "price": 119.00,
+                "image": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=600&q=80",
+                "stock": 15
+            }
+        ]
+    },
+    {
+        "id": "prod_elec_006",
+        "slug": "aeroglide-ergonomic-wireless-mouse",
+        "name": "AeroGlide Ergonomic Wireless Mouse",
+        "description": "Precision vertical ergonomic mouse engineered to reduce wrist strain during long desk sessions.",
+        "category": "Electronics",
+        "tag": "Peripherals",
+        "base_price": 64.99,
+        "default_image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_elec_006_blk",
+                "type": "Right-Handed",
+                "color": "Graphite Black",
+                "color_code": "#27272a",
+                "price": 64.99,
+                "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=600&q=80",
+                "stock": 40
+            },
+            {
+                "id": "var_elec_006_slv",
+                "type": "Right-Handed",
+                "color": "Platinum Silver",
+                "color_code": "#e4e4e7",
+                "price": 64.99,
+                "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=600&q=80",
+                "stock": 22
+            }
+        ]
+    },
+    {
+        "id": "prod_elec_007",
+        "slug": "claritycam-4k-pro-webcam",
+        "name": "ClarityCam 4K Pro Streaming Webcam",
+        "description": "Ultra-HD 4K streaming camera with AI auto-framing, dual noise-reducing microphones, and privacy shutter.",
+        "category": "Electronics",
+        "tag": "Video",
+        "base_price": 129.99,
+        "default_image": "https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_elec_007_blk",
+                "type": "Standard Mount",
+                "color": "Onyx Black",
+                "color_code": "#09090b",
+                "price": 129.99,
+                "image": "https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=600&q=80",
+                "stock": 35
+            },
+            {
+                "id": "var_elec_007_wht",
+                "type": "Standard Mount",
+                "color": "Arctic Frost",
+                "color_code": "#fafafa",
+                "price": 129.99,
+                "image": "https://images.unsplash.com/photo-1587826080692-f439cd0b70da?auto=format&fit=crop&w=600&q=80",
+                "stock": 20
+            }
+        ]
+    },
+    {
+        "id": "prod_elec_008",
+        "slug": "magnaflow-magnetic-power-bank",
+        "name": "MagnaFlow Magnetic Wireless Power Bank",
+        "description": "10,000mAh magnetic portable charger with folding kickstand and fast wireless induction pad.",
+        "category": "Electronics",
+        "tag": "Power",
+        "base_price": 49.99,
+        "default_image": "https://images.unsplash.com/photo-1609592424368-23c8990d1e57?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_elec_008_blk",
+                "type": "10,000mAh",
+                "color": "Carbon Black",
+                "color_code": "#1f2937",
+                "price": 49.99,
+                "image": "https://images.unsplash.com/photo-1609592424368-23c8990d1e57?auto=format&fit=crop&w=600&q=80",
+                "stock": 80
+            },
+            {
+                "id": "var_elec_008_sage",
+                "type": "10,000mAh",
+                "color": "Sage Green",
+                "color_code": "#84a98c",
+                "price": 49.99,
+                "image": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80",
+                "stock": 42
+            },
+            {
+                "id": "var_elec_008_lilac",
+                "type": "10,000mAh",
+                "color": "Lilac Mist",
+                "color_code": "#c084fc",
+                "price": 49.99,
+                "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80",
+                "stock": 25
+            }
+        ]
+    },
+    {
+        "id": "prod_elec_009",
+        "slug": "soundpod-noise-cancelling-earbuds",
+        "name": "SoundPod True Wireless Earbuds",
+        "description": "Ergonomic in-ear buds with hybrid ANC, low-latency gaming mode, and Qi wireless charging case.",
+        "category": "Electronics",
+        "tag": "Audio",
+        "base_price": 89.99,
+        "default_image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_elec_009_wht",
+                "type": "Standard",
+                "color": "Pure White",
+                "color_code": "#ffffff",
+                "price": 89.99,
+                "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80",
+                "stock": 65
+            },
+            {
+                "id": "var_elec_009_nvy",
+                "type": "Standard",
+                "color": "Midnight Blue",
+                "color_code": "#1e3a8a",
+                "price": 89.99,
+                "image": "https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?auto=format&fit=crop&w=600&q=80",
+                "stock": 35
+            }
+        ]
+    },
+    {
+        "id": "prod_elec_010",
+        "slug": "lumina-smart-led-desk-lamp",
+        "name": "Lumina Smart LED Desk Lamp",
+        "description": "Eye-care architect lamp featuring tunable color temperature, touch slide dimmer, and USB-C outlet.",
+        "category": "Electronics",
+        "tag": "Home Tech",
+        "base_price": 59.00,
+        "default_image": "https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_elec_010_blk",
+                "type": "Desk Base",
+                "color": "Space Grey",
+                "color_code": "#374151",
+                "price": 59.00,
+                "image": "https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?auto=format&fit=crop&w=600&q=80",
+                "stock": 28
+            },
+            {
+                "id": "var_elec_010_wht",
+                "type": "Desk Base",
+                "color": "Matte White",
+                "color_code": "#f9fafb",
+                "price": 59.00,
+                "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80",
+                "stock": 33
+            },
+            {
+                "id": "var_elec_010_clp",
+                "type": "Clamp Mount",
+                "color": "Space Grey",
+                "color_code": "#374151",
+                "price": 64.00,
+                "image": "https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?auto=format&fit=crop&w=600&q=80",
+                "stock": 19
+            }
+        ]
+    },
+    {
+        "id": "prod_app_001",
+        "slug": "merino-minimalist-crewneck-tee",
+        "name": "Merino Minimalist Crewneck Tee",
+        "description": "Ultra-soft 100% fine Merino wool everyday crewneck providing natural temperature regulation and odor control.",
+        "category": "Apparel",
+        "tag": "Tops",
+        "base_price": 54.50,
+        "default_image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_app_001_nvy",
+                "type": "Slim Fit",
+                "color": "Deep Navy",
+                "color_code": "#0f172a",
+                "price": 54.50,
+                "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80",
+                "stock": 50
+            },
+            {
+                "id": "var_app_001_gry",
+                "type": "Regular Fit",
+                "color": "Heather Grey",
+                "color_code": "#9ca3af",
+                "price": 54.50,
+                "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80",
+                "stock": 42
+            },
+            {
+                "id": "var_app_001_olv",
+                "type": "Regular Fit",
+                "color": "Olive Drab",
+                "color_code": "#3f4f34",
+                "price": 54.50,
+                "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=600&q=80",
+                "stock": 35
+            }
+        ]
+    },
+    {
+        "id": "prod_app_002",
+        "slug": "trailflex-stretch-chino-pants",
+        "name": "TrailFlex Stretch Chino Pants",
+        "description": "Commuter chino trousers constructed with 4-way stretch fabric and water-repellent DWR coating.",
+        "category": "Apparel",
+        "tag": "Bottoms",
+        "base_price": 78.00,
+        "default_image": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_app_002_khk",
+                "type": "Slim Tapered",
+                "color": "Classic Khaki",
+                "color_code": "#c2b280",
+                "price": 78.00,
+                "image": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=600&q=80",
+                "stock": 38
+            },
+            {
+                "id": "var_app_002_slt",
+                "type": "Slim Tapered",
+                "color": "Slate Grey",
+                "color_code": "#475569",
+                "price": 78.00,
+                "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80",
+                "stock": 40
+            },
+            {
+                "id": "var_app_002_blk",
+                "type": "Straight Cut",
+                "color": "Pitch Black",
+                "color_code": "#18181b",
+                "price": 78.00,
+                "image": "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=600&q=80",
+                "stock": 25
+            }
+        ]
+    },
+    {
+        "id": "prod_app_003",
+        "slug": "aeroshield-lightweight-windbreaker",
+        "name": "AeroShield Lightweight Windbreaker",
+        "description": "Packable, windproof hooded jacket designed for unpredictable city commutes and trail excursions.",
+        "category": "Apparel",
+        "tag": "Outerwear",
+        "base_price": 110.00,
+        "default_image": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_app_003_yel",
+                "type": "Unisex Regular",
+                "color": "Acid Yellow",
+                "color_code": "#eab308",
+                "price": 110.00,
+                "image": "https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=600&q=80",
+                "stock": 18
+            },
+            {
+                "id": "var_app_003_blk",
+                "type": "Unisex Regular",
+                "color": "Phantom Black",
+                "color_code": "#0f172a",
+                "price": 110.00,
+                "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80",
+                "stock": 35
+            }
+        ]
+    },
+    {
+        "id": "prod_app_004",
+        "slug": "heavyweight-fleece-pullover-hoodie",
+        "name": "Heavyweight Fleece Pullover Hoodie",
+        "description": "450 GSM French terry cotton hoodie featuring double-lined hood and reinforced kangaroo pouch.",
+        "category": "Apparel",
+        "tag": "Tops",
+        "base_price": 85.00,
+        "default_image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_app_004_oat",
+                "type": "Relaxed Fit",
+                "color": "Oatmeal Heather",
+                "color_code": "#e2ded6",
+                "price": 85.00,
+                "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80",
+                "stock": 48
+            },
+            {
+                "id": "var_app_004_for",
+                "type": "Relaxed Fit",
+                "color": "Forest Green",
+                "color_code": "#14532d",
+                "price": 85.00,
+                "image": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80",
+                "stock": 30
+            },
+            {
+                "id": "var_app_004_cst",
+                "type": "Relaxed Fit",
+                "color": "Rust Orange",
+                "color_code": "#c2410c",
+                "price": 85.00,
+                "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=600&q=80",
+                "stock": 22
+            }
+        ]
+    },
+    {
+        "id": "prod_app_005",
+        "slug": "stridetek-knit-running-shoes",
+        "name": "StrideTek Knit Running Shoes",
+        "description": "Breathable seamless knit runners with dynamic EVA foam midsoles and high-grip rubber treads.",
+        "category": "Apparel",
+        "tag": "Footwear",
+        "base_price": 120.00,
+        "default_image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_app_005_red",
+                "type": "Athletic",
+                "color": "Crimson Red",
+                "color_code": "#dc2626",
+                "price": 120.00,
+                "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+                "stock": 27
+            },
+            {
+                "id": "var_app_005_all_blk",
+                "type": "Athletic",
+                "color": "All Black",
+                "color_code": "#09090b",
+                "price": 120.00,
+                "image": "https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=600&q=80",
+                "stock": 44
+            },
+            {
+                "id": "var_app_005_cld_wht",
+                "type": "Athletic",
+                "color": "Cloud White",
+                "color_code": "#f8fafc",
+                "price": 120.00,
+                "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=600&q=80",
+                "stock": 31
+            }
+        ]
+    },
+    {
+        "id": "prod_app_006",
+        "slug": "selvedge-tapered-denim-jeans",
+        "name": "Selvedge Tapered Denim Jeans",
+        "description": "13.5oz raw Japanese selvedge denim crafted with custom brass hardware and red-line cuff detailing.",
+        "category": "Apparel",
+        "tag": "Bottoms",
+        "base_price": 135.00,
+        "default_image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_app_006_raw_ind",
+                "type": "Tapered Cut",
+                "color": "Raw Indigo",
+                "color_code": "#1e293b",
+                "price": 135.00,
+                "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80",
+                "stock": 30
+            },
+            {
+                "id": "var_app_006_wsh_ind",
+                "type": "Tapered Cut",
+                "color": "Vintage Stone Wash",
+                "color_code": "#38bdf8",
+                "price": 145.00,
+                "image": "https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=600&q=80",
+                "stock": 20
+            }
+        ]
+    },
+    {
+        "id": "prod_app_007",
+        "slug": "cloudloft-down-puffer-vest",
+        "name": "CloudLoft Down Puffer Vest",
+        "description": "700 fill-power recycled down vest built with water-resistant ripstop shell and thermal fleece collar.",
+        "category": "Apparel",
+        "tag": "Outerwear",
+        "base_price": 95.00,
+        "default_image": "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_app_007_cpr",
+                "type": "Standard Fit",
+                "color": "Burnt Copper",
+                "color_code": "#9a3412",
+                "price": 95.00,
+                "image": "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=600&q=80",
+                "stock": 19
+            },
+            {
+                "id": "var_app_007_blk",
+                "type": "Standard Fit",
+                "color": "Matte Charcoal",
+                "color_code": "#27272a",
+                "price": 95.00,
+                "image": "https://images.unsplash.com/photo-1509551388413-e18d0ac5d495?auto=format&fit=crop&w=600&q=80",
+                "stock": 33
+            }
+        ]
+    },
+    {
+        "id": "prod_app_008",
+        "slug": "aerolite-commuter-daypack",
+        "name": "AeroLite Commuter Daypack",
+        "description": "20-liter water-resistant daily pack equipped with padded 16-inch laptop compartment and luggage pass-through.",
+        "category": "Apparel",
+        "tag": "Accessories",
+        "base_price": 89.00,
+        "default_image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_app_008_chr",
+                "type": "20L Everyday",
+                "color": "Charcoal Grey",
+                "color_code": "#334155",
+                "price": 89.00,
+                "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+                "stock": 52
+            },
+            {
+                "id": "var_app_008_olv",
+                "type": "20L Everyday",
+                "color": "Moss Olive",
+                "color_code": "#4d5b44",
+                "price": 89.00,
+                "image": "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?auto=format&fit=crop&w=600&q=80",
+                "stock": 26
+            },
+            {
+                "id": "var_app_008_tn",
+                "type": "20L Everyday",
+                "color": "Desert Tan",
+                "color_code": "#d4b996",
+                "price": 89.00,
+                "image": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=600&q=80",
+                "stock": 17
+            }
+        ]
+    },
+    {
+        "id": "prod_app_009",
+        "slug": "thermal-knit-merino-beanie",
+        "name": "Thermal Knit Merino Beanie",
+        "description": "Ribbed winter watch cap woven from soft, breathable non-mulesed wool yarn.",
+        "category": "Apparel",
+        "tag": "Accessories",
+        "base_price": 28.00,
+        "default_image": "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_app_009_mst",
+                "type": "One Size",
+                "color": "Dijon Mustard",
+                "color_code": "#eab308",
+                "price": 28.00,
+                "image": "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?auto=format&fit=crop&w=600&q=80",
+                "stock": 60
+            },
+            {
+                "id": "var_app_009_blk",
+                "type": "One Size",
+                "color": "Coal Black",
+                "color_code": "#18181b",
+                "price": 28.00,
+                "image": "https://images.unsplash.com/photo-1618354691792-d1d42acfd860?auto=format&fit=crop&w=600&q=80",
+                "stock": 75
+            },
+            {
+                "id": "var_app_009_mar",
+                "type": "One Size",
+                "color": "Burgundy Wine",
+                "color_code": "#881337",
+                "price": 28.00,
+                "image": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80",
+                "stock": 38
+            }
+        ]
+    },
+    {
+        "id": "prod_app_010",
+        "slug": "orbit-minimalist-chronograph-watch",
+        "name": "Orbit Minimalist Chronograph Watch",
+        "description": "Sleek surgical-grade stainless steel timepiece with Japanese quartz movement and quick-release strap.",
+        "category": "Apparel",
+        "tag": "Accessories",
+        "base_price": 145.00,
+        "default_image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
+        "variants": [
+            {
+                "id": "var_app_010_slv",
+                "type": "40mm Case",
+                "color": "Brushed Silver",
+                "color_code": "#cbd5e1",
+                "price": 145.00,
+                "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
+                "stock": 25
+            },
+            {
+                "id": "var_app_010_blk",
+                "type": "40mm Case",
+                "color": "Stealth Black",
+                "color_code": "#0f172a",
+                "price": 145.00,
+                "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80",
+                "stock": 32
+            },
+            {
+                "id": "var_app_010_rgd",
+                "type": "40mm Case",
+                "color": "Rose Gold",
+                "color_code": "#b76e79",
+                "price": 160.00,
+                "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80",
+                "stock": 14
+            }
+        ]
+    }
+]
