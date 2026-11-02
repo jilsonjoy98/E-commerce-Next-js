@@ -35,7 +35,7 @@ const PROMO_SLIDES: PromoSlide[] = [
     badge: "Festive Exclusive",
     src: "/home/promotional/diwali.png",
     alt: "Diwali Utsav Festival of Deals banner with glowing diyas, festive fireworks, and up to 50% discount",
-    href: "/deals?festival=diwali",
+    href: "/products",
     ctaText: "Shop Diwali Sale",
     season: "diwali",
   },
@@ -46,7 +46,7 @@ const PROMO_SLIDES: PromoSlide[] = [
     badge: "Limited Season",
     src: "/home/promotional/halloween.png",
     alt: "Halloween Sale Spooktacular Savings banner with illuminated pumpkins and up to 50% off",
-    href: "/deals?festival=halloween",
+    href: "/products",
     ctaText: "Shop Halloween Deals",
     season: "halloween",
   },
@@ -57,7 +57,7 @@ const PROMO_SLIDES: PromoSlide[] = [
     badge: "Holiday Mega Sale",
     src: "/home/promotional/christmas.png",
     alt: "Christmas Sale Jerry Merry Offers banner with a decorated tree, gift boxes, and up to 50% off",
-    href: "/deals?festival=christmas",
+    href: "/products",
     ctaText: "Shop Christmas Offers",
     season: "christmas",
   },
@@ -292,8 +292,8 @@ export default function Promotional() {
             <RotateCcw className="h-5 w-5" />
           </div>
           <div>
-            <p className="text-xs font-semibold text-gray-900 sm:text-sm">10-Day Easy Returns</p>
-            <p className="text-[11px] text-gray-500 sm:text-xs">Hassle-free guarantee</p>
+            <p className="text-xs font-semibold text-gray-900 sm:text-sm">10 Day Easy Returns</p>
+            <p className="text-[11px] text-gray-500 sm:text-xs">Hassle free guarantee</p>
           </div>
         </div>
       </div>

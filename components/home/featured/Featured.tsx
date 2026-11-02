@@ -80,7 +80,7 @@ export default function Featured() {
             Featured Products
           </h2>
           <p className="mt-1 text-sm text-gray-500 max-w-2xl">
-            Explore our hand-selected bestsellers and top-rated favorites across all categories.
+            Explore our hand selected bestsellers and top rated favorites across all categories.
           </p>
         </div>
 

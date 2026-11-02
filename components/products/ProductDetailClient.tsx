@@ -245,7 +245,7 @@ export default function ProductDetailClient({
                     <RotateCcw className="h-4 w-4" />
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900">30-Day Easy Returns</p>
+                    <p className="font-bold text-gray-900">30 Days Easy Returns</p>
                     <p className="text-[11px] text-gray-500">Hassle-free return policy</p>
                   </div>
                 </div>
@@ -256,7 +256,7 @@ export default function ProductDetailClient({
                   </div>
                   <div>
                     <p className="font-bold text-gray-900">Official Warranty</p>
-                    <p className="text-[11px] text-gray-500">1-Year brand warranty</p>
+                    <p className="text-[11px] text-gray-500">1 Year brand warranty</p>
                   </div>
                 </div>
               </div>
@@ -442,7 +442,7 @@ export default function ProductDetailClient({
               <div className="mt-8 border-t border-gray-100 pt-4 flex flex-wrap items-center justify-between text-xs text-gray-400">
                 <span>Product ID: <strong className="text-gray-700">{product.id}</strong></span>
                 <span>Category: <strong className="text-gray-700">{product.category}</strong></span>
-                <span>Shipping: <strong className="text-emerald-600">Free Nationwide</strong></span>
+                <span>Shipping: <strong className="text-emerald-600">Free</strong></span>
               </div>
             </div>
           </div>
@@ -628,7 +628,7 @@ export default function ProductDetailClient({
                   Related Products
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-500 mt-0.5">
-                  More top-rated picks in {product.category}
+                  More top rated picks in {product.category}
                 </p>
               </div>
 

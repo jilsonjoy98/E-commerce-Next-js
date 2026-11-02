@@ -528,13 +528,10 @@ export default function CartClient() {
                   </div>
 
                   <div className="border-t border-gray-100 pt-5 space-y-2 text-xs text-gray-500">
-                    <div className="flex items-center gap-2">
-                      <ShieldCheck className="h-4 w-4 text-emerald-600 flex-shrink-0" />
-                      <span>256-Bit SSL Encrypted Checkout</span>
-                    </div>
+             
                     <div className="flex items-center gap-2">
                       <RotateCcw className="h-4 w-4 text-blue-600 flex-shrink-0" />
-                      <span>30-Day Money Back Guarantee</span>
+                      <span>30 Day Money Back Guarantee</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Truck className="h-4 w-4 text-orange-500 flex-shrink-0" />
