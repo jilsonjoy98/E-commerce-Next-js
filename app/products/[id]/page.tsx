@@ -29,14 +29,46 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: "Product Not Found | eShop",
+      title: "Product Not Found",
       description: "The requested product does not exist.",
+      robots: { index: false, follow: false },
     };
   }
 
+  const imageUrl = product.default_image;
+
   return {
-    title: `${product.name} | eShop`,
+    title: product.name,
     description: product.description,
+    keywords: [
+      product.name,
+      product.category,
+      product.tag,
+      "online store",
+      "buy online",
+      `price ₹${product.base_price}`,
+    ],
+    openGraph: {
+      title: product.name,
+      description: product.description,
+      type: "website",
+      images: imageUrl
+        ? [
+            {
+              url: imageUrl,
+              width: 800,
+              height: 800,
+              alt: product.name,
+            },
+          ]
+        : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.name,
+      description: product.description,
+      images: imageUrl ? [imageUrl] : [],
+    },
   };
 }
 

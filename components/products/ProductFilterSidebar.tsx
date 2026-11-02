@@ -359,13 +359,11 @@ export default function ProductFilterSidebar({
         </div>
       </div>
 
-      {/* 5. Special Toggles */}
       <div className="space-y-3 border-t border-gray-200 pt-5">
         <span className="text-xs font-bold uppercase tracking-wider text-gray-500">
           Preferences
         </span>
 
-        {/* Featured Only */}
         <label className="flex items-center justify-between cursor-pointer rounded-lg p-2 hover:bg-gray-50 transition">
           <div className="flex items-center gap-2">
             <Sparkles className="h-3.5 w-3.5 text-orange-500" />
@@ -381,7 +379,6 @@ export default function ProductFilterSidebar({
           />
         </label>
 
-        {/* In Stock Only */}
         <label className="flex items-center justify-between cursor-pointer rounded-lg p-2 hover:bg-gray-50 transition">
           <span className="text-xs font-medium text-gray-700">
             In-Stock Only

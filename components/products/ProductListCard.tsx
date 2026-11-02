@@ -52,7 +52,6 @@ export default function ProductListCard({
       onClick={handleCardClick}
       className="group relative flex flex-col sm:flex-row gap-5 rounded-2xl border border-gray-200 bg-white p-4 shadow-xs transition-all duration-300 hover:border-orange-200 hover:shadow-lg cursor-pointer"
     >
-      {/* Product Image */}
       <div className="relative aspect-square w-full sm:w-48 sm:min-w-[12rem] overflow-hidden rounded-xl bg-gray-50 flex-shrink-0">
         <Image
           src={displayImage}
@@ -62,7 +61,6 @@ export default function ProductListCard({
           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
 
-        {/* Badges */}
         <div className="absolute top-2.5 left-2.5 flex flex-col gap-1.5 z-10 pointer-events-none">
           <span className="inline-flex items-center rounded-full bg-black/60 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-medium text-white shadow-xs">
             {product.category}
@@ -75,7 +73,6 @@ export default function ProductListCard({
           )}
         </div>
 
-        {/* Wishlist Button */}
         <button
           type="button"
           onClick={handleWishlistClick}
@@ -100,16 +97,13 @@ export default function ProductListCard({
         )}
       </div>
 
-      {/* Main Details */}
       <div className="flex flex-1 flex-col justify-between">
         <div>
-          {/* Header row: category / tag and rating */}
           <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="text-xs font-semibold uppercase tracking-wider text-orange-600 bg-orange-50 px-2 py-0.5 rounded-md">
               {product.tag}
             </span>
 
-            {/* Rating */}
             <div className="flex items-center gap-1 text-xs">
               <div className="flex items-center text-amber-400">
                 <Star className="h-3.5 w-3.5 fill-amber-400" />
@@ -124,7 +118,6 @@ export default function ProductListCard({
             </div>
           </div>
 
-          {/* Title */}
           <h3
             title={product.name}
             className="mt-2 text-base sm:text-lg font-bold text-gray-900 group-hover:text-orange-600 transition-colors"
@@ -132,12 +125,10 @@ export default function ProductListCard({
             {product.name}
           </h3>
 
-          {/* Description */}
           <p className="mt-1.5 text-xs sm:text-sm text-gray-500 line-clamp-2 leading-relaxed">
             {product.description}
           </p>
 
-          {/* Variant Swatches */}
           {product.variants && product.variants.length > 1 && (
             <div className="mt-3 flex items-center gap-2">
               <span className="text-xs text-gray-500 font-medium">Options:</span>
@@ -168,14 +159,12 @@ export default function ProductListCard({
             </div>
           )}
 
-          {/* Shipping badge */}
           <div className="mt-3 flex items-center gap-1.5 text-xs text-gray-500">
             <Truck className="h-3.5 w-3.5 text-emerald-600" />
             <span>Free Shipping Available • In Stock ({currentStock})</span>
           </div>
         </div>
 
-        {/* Pricing and Action Buttons */}
         <div className="mt-4 pt-3 border-t border-gray-100 flex flex-wrap items-center justify-between gap-3">
           <div>
             <span className="text-xs text-gray-400 block -mb-0.5 font-medium">Price</span>

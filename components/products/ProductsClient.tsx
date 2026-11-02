@@ -32,7 +32,6 @@ export default function ProductsClient() {
     return rawProducts as Product[];
   }, []);
 
-  // Compute min & max prices across all products
   const { minPriceLimit, maxPriceLimit } = useMemo(() => {
     const prices = allProducts.map((p) => p.base_price);
     return {
@@ -41,13 +40,11 @@ export default function ProductsClient() {
     };
   }, [allProducts]);
 
-  // Read URL query params on initial load
   const initialCategory = searchParams.get("category") || "All";
   const initialSearch = searchParams.get("search") || "";
   const initialTag = searchParams.get("tag");
   const initialFeatured = searchParams.get("featured") === "true";
 
-  // Filter & Search states
   const [searchQuery, setSearchQuery] = useState(initialSearch);
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
   const [selectedTags, setSelectedTags] = useState<string[]>(
@@ -62,15 +59,12 @@ export default function ProductsClient() {
   const [inStockOnly, setInStockOnly] = useState<boolean>(false);
   const [sortBy, setSortBy] = useState<string>("featured");
 
-  // View state
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
-  // E-commerce interactive state
   const [wishlist, setWishlist] = useState<string[]>([]);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Synchronize state when URL query params change (e.g. Navbar search or Category click)
   useEffect(() => {
     const categoryParam = searchParams.get("category");
     const searchParam = searchParams.get("search");
@@ -83,7 +77,6 @@ export default function ProductsClient() {
     if (featuredParam === "true") setFeaturedOnly(true);
   }, [searchParams]);
 
-  // Compute Category options with product count
   const categoryOptions: CategoryOption[] = useMemo(() => {
     const counts: Record<string, number> = { All: allProducts.length };
     allProducts.forEach((p) => {
@@ -97,7 +90,6 @@ export default function ProductsClient() {
     }));
   }, [allProducts]);
 
-  // Compute available Tags for the selected category
   const tagOptions: TagOption[] = useMemo(() => {
     const relevantProducts =
       selectedCategory === "All"
@@ -116,11 +108,9 @@ export default function ProductsClient() {
       .sort((a, b) => b.count - a.count);
   }, [allProducts, selectedCategory]);
 
-  // Filter and Sort products
   const filteredProducts = useMemo(() => {
     return allProducts
       .filter((p) => {
-        // Search query filter (matches name, description, category, tag)
         if (searchQuery.trim()) {
           const query = searchQuery.toLowerCase().trim();
           const matchName = p.name.toLowerCase().includes(query);
@@ -132,32 +122,26 @@ export default function ProductsClient() {
           }
         }
 
-        // Category filter
         if (selectedCategory !== "All" && p.category !== selectedCategory) {
           return false;
         }
 
-        // Tags filter (item tag must match one of selected tags)
         if (selectedTags.length > 0 && !selectedTags.includes(p.tag)) {
           return false;
         }
 
-        // Price range filter
         if (p.base_price < priceRange[0] || p.base_price > priceRange[1]) {
           return false;
         }
 
-        // Rating filter
         if (minRating > 0 && p.rating.rate < minRating) {
           return false;
         }
 
-        // Featured only filter
         if (featuredOnly && !p.featured) {
           return false;
         }
 
-        // In Stock only filter
         if (inStockOnly) {
           const totalStock = p.variants
             ? p.variants.reduce((sum, v) => sum + (v.stock || 0), 0)
@@ -173,7 +157,6 @@ export default function ProductsClient() {
         if (sortBy === "rating-desc") return b.rating.rate - a.rating.rate;
         if (sortBy === "name-asc") return a.name.localeCompare(b.name);
         if (sortBy === "name-desc") return b.name.localeCompare(a.name);
-        // Default "featured": featured items first, then by rating
         if (a.featured === b.featured) {
           return b.rating.rate - a.rating.rate;
         }
@@ -191,7 +174,6 @@ export default function ProductsClient() {
     sortBy,
   ]);
 
-  // Check if any filters are currently active
   const hasActiveFilters = useMemo(() => {
     return (
       searchQuery.trim() !== "" ||
@@ -215,7 +197,6 @@ export default function ProductsClient() {
     inStockOnly,
   ]);
 
-  // Active filters count badge
   const activeFiltersCount = useMemo(() => {
     let count = 0;
     if (searchQuery.trim()) count += 1;
@@ -238,7 +219,6 @@ export default function ProductsClient() {
     inStockOnly,
   ]);
 
-  // Reset all filters
   const handleResetFilters = () => {
     setSearchQuery("");
     setSelectedCategory("All");
@@ -255,7 +235,6 @@ export default function ProductsClient() {
     );
   };
 
-  // Toast notification helper
   const showToast = (message: string) => {
     setToastMessage(message);
     setTimeout(() => {
@@ -288,7 +267,6 @@ export default function ProductsClient() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
-      {/* Toast Notification */}
       {toastMessage && (
         <div className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 rounded-xl bg-gray-900/95 px-4 py-3 text-sm font-medium text-white shadow-xl backdrop-blur transition-all duration-300 animate-in fade-in slide-in-from-bottom-3">
           <CheckCircle2 className="h-4 w-4 text-emerald-400 flex-shrink-0" />
@@ -296,7 +274,6 @@ export default function ProductsClient() {
         </div>
       )}
 
-      {/* Breadcrumb & Header Hero Banner */}
       <section className="bg-white border-b border-gray-200 py-6 sm:py-8 shadow-2xs">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
@@ -324,7 +301,6 @@ export default function ProductsClient() {
               </p>
             </div>
 
-            {/* Quick in-page Search Box */}
             <div className="relative w-full md:w-80">
               <input
                 type="text"
@@ -349,10 +325,8 @@ export default function ProductsClient() {
         </div>
       </section>
 
-      {/* Main Container */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
-          {/* Desktop Filter Sidebar */}
           <div className="hidden lg:block lg:col-span-1">
             <div className="sticky top-20 rounded-2xl border border-gray-200 bg-white p-5 shadow-2xs">
               <ProductFilterSidebar
@@ -379,11 +353,8 @@ export default function ProductsClient() {
             </div>
           </div>
 
-          {/* Product Listing Area */}
           <div className="lg:col-span-3 space-y-5">
-            {/* Control & Sorting Toolbar */}
             <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-gray-200 bg-white p-3 sm:p-4 shadow-2xs">
-              {/* Left: Product count & Mobile filter trigger */}
               <div className="flex items-center gap-3">
                 <button
                   type="button"
@@ -408,9 +379,7 @@ export default function ProductsClient() {
                 </p>
               </div>
 
-              {/* Right: Sort Dropdown & View Mode Switcher */}
               <div className="flex items-center gap-3 ml-auto">
-                {/* Sort selector */}
                 <div className="flex items-center gap-1.5">
                   <ArrowUpDown className="hidden sm:block h-3.5 w-3.5 text-gray-400" />
                   <label htmlFor="sort-select" className="sr-only">
@@ -431,7 +400,6 @@ export default function ProductsClient() {
                   </select>
                 </div>
 
-                {/* View Mode Toggle */}
                 <div className="flex items-center rounded-xl border border-gray-200 bg-gray-50 p-0.5">
                   <button
                     type="button"
@@ -461,14 +429,12 @@ export default function ProductsClient() {
               </div>
             </div>
 
-            {/* Active Filter Badges */}
             {hasActiveFilters && (
               <div className="flex flex-wrap items-center gap-2 pt-1">
                 <span className="text-xs font-semibold text-gray-400 mr-1">
                   Active Filters:
                 </span>
 
-                {/* Search Query Chip */}
                 {searchQuery && (
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 border border-orange-200 px-3 py-1 text-xs font-medium text-orange-800">
                     Search: &ldquo;{searchQuery}&rdquo;
@@ -482,7 +448,6 @@ export default function ProductsClient() {
                   </span>
                 )}
 
-                {/* Category Chip */}
                 {selectedCategory !== "All" && (
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 border border-orange-200 px-3 py-1 text-xs font-medium text-orange-800">
                     Category: {selectedCategory}
@@ -496,7 +461,6 @@ export default function ProductsClient() {
                   </span>
                 )}
 
-                {/* Selected Tags Chips */}
                 {selectedTags.map((tag) => (
                   <span
                     key={tag}
@@ -513,7 +477,6 @@ export default function ProductsClient() {
                   </span>
                 ))}
 
-                {/* Price Range Chip */}
                 {(priceRange[0] > minPriceLimit || priceRange[1] < maxPriceLimit) && (
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 border border-orange-200 px-3 py-1 text-xs font-medium text-orange-800">
                     Price: ₹{priceRange[0]} - ₹{priceRange[1]}
@@ -527,7 +490,6 @@ export default function ProductsClient() {
                   </span>
                 )}
 
-                {/* Rating Chip */}
                 {minRating > 0 && (
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 border border-orange-200 px-3 py-1 text-xs font-medium text-orange-800">
                     Rating: {minRating}★+
@@ -541,7 +503,6 @@ export default function ProductsClient() {
                   </span>
                 )}
 
-                {/* Featured Chip */}
                 {featuredOnly && (
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 border border-orange-200 px-3 py-1 text-xs font-medium text-orange-800">
                     Featured Only
@@ -555,7 +516,6 @@ export default function ProductsClient() {
                   </span>
                 )}
 
-                {/* In Stock Chip */}
                 {inStockOnly && (
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 border border-orange-200 px-3 py-1 text-xs font-medium text-orange-800">
                     In Stock Only
@@ -569,7 +529,6 @@ export default function ProductsClient() {
                   </span>
                 )}
 
-                {/* Reset all button */}
                 <button
                   type="button"
                   onClick={handleResetFilters}
@@ -580,7 +539,6 @@ export default function ProductsClient() {
               </div>
             )}
 
-            {/* Products Grid or List View */}
             {filteredProducts.length > 0 ? (
               viewMode === "grid" ? (
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -608,7 +566,6 @@ export default function ProductsClient() {
                 </div>
               )
             ) : (
-              /* Empty State */
               <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-dashed border-gray-200 bg-white p-12 text-center shadow-2xs">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-50 text-orange-500 mb-4">
                   <PackageSearch className="h-8 w-8" />
@@ -633,17 +590,14 @@ export default function ProductsClient() {
         </div>
       </div>
 
-      {/* Mobile Drawer Filter Dialog */}
       {isMobileFilterOpen && (
         <div className="fixed inset-0 z-50 flex lg:hidden">
-          {/* Backdrop */}
           <div
             className="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity"
             onClick={() => setIsMobileFilterOpen(false)}
             aria-hidden="true"
           />
 
-          {/* Drawer Panel */}
           <div className="relative ml-auto flex h-full w-full max-w-sm flex-col bg-white p-6 shadow-2xl overflow-y-auto">
             <ProductFilterSidebar
               categories={categoryOptions}

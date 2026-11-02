@@ -13,12 +13,10 @@ export default function Featured() {
   const [wishlist, setWishlist] = useState<string[]>([]);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Cast imported json to typed Product array and filter featured items
   const allFeaturedProducts: Product[] = useMemo(() => {
     return (rawProducts as Product[]).filter((p) => p.featured);
   }, []);
 
-  // Compute category options with counts
   const categories = useMemo(() => {
     const counts: Record<string, number> = { All: allFeaturedProducts.length };
     allFeaturedProducts.forEach((p) => {
@@ -32,7 +30,6 @@ export default function Featured() {
     }));
   }, [allFeaturedProducts]);
 
-  // Filtered products list
   const filteredProducts = useMemo(() => {
     if (selectedCategory === "All") return allFeaturedProducts;
     return allFeaturedProducts.filter((p) => p.category === selectedCategory);
@@ -70,7 +67,6 @@ export default function Featured() {
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-      {/* Toast Notification */}
       {toastMessage && (
         <div className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 rounded-xl bg-gray-900/95 px-4 py-3 text-sm font-medium text-white shadow-xl backdrop-blur transition-all duration-300 animate-in fade-in slide-in-from-bottom-3">
           <CheckCircle2 className="h-4 w-4 text-emerald-400 flex-shrink-0" />
@@ -78,7 +74,6 @@ export default function Featured() {
         </div>
       )}
 
-      {/* Header Section */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 pb-6 border-b border-gray-200">
         <div>
           <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900">
@@ -89,7 +84,6 @@ export default function Featured() {
           </p>
         </div>
 
-        {/* View All link */}
         <div className="flex items-center gap-2">
           <Link
             href="/products"
@@ -101,7 +95,6 @@ export default function Featured() {
         </div>
       </div>
 
-      {/* Category Filter Pills */}
       <div className="mt-6 flex flex-wrap items-center gap-2">
         <div className="hidden sm:flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-gray-400 mr-2">
           <SlidersHorizontal className="h-3.5 w-3.5" />
@@ -133,7 +126,6 @@ export default function Featured() {
         })}
       </div>
 
-      {/* Product Grid */}
       {filteredProducts.length > 0 ? (
         <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {filteredProducts.map((product) => (

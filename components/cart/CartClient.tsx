@@ -39,7 +39,6 @@ export default function CartClient() {
   const clearCart = useCartStore((state) => state.clearCart);
   const addItem = useCartStore((state) => state.addItem);
 
-  // Recommendations for empty cart or upsell
   const recommendations: Product[] = (rawProducts as Product[])
     .filter((p) => p.featured)
     .slice(0, 4);
@@ -75,7 +74,6 @@ export default function CartClient() {
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const totalCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
-  // Free shipping threshold: ₹100
   const freeShippingThreshold = 100;
   const isFreeShipping = subtotal >= freeShippingThreshold || subtotal === 0;
   const shippingFee = isFreeShipping ? 0 : 15;
@@ -91,11 +89,11 @@ export default function CartClient() {
 
     if (code === "SAVE10" || code === "ESHOP10") {
       setAppliedPromo(code);
-      setPromoDiscountRate(0.1); // 10% discount
+      setPromoDiscountRate(0.1);
       showToast(`Promo "${code}" applied! 10% discount has been applied.`);
     } else if (code === "WELCOME20") {
       setAppliedPromo(code);
-      setPromoDiscountRate(0.2); // 20% discount
+      setPromoDiscountRate(0.2);
       showToast(`Promo "${code}" applied! 20% discount has been applied.`);
     } else {
       setPromoError("Invalid code. Try 'SAVE10' for 10% off.");
@@ -158,9 +156,7 @@ export default function CartClient() {
         </div>
       </section>
 
-      {/* Main Container */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
-        {/* Order Completed Success Modal / Banner */}
         {orderCompleted ? (
           <div className="rounded-3xl border border-emerald-200 bg-white p-8 sm:p-12 text-center shadow-sm max-w-2xl mx-auto my-12 animate-in zoom-in-95">
             <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 mb-6">
@@ -190,7 +186,6 @@ export default function CartClient() {
             </div>
           </div>
         ) : items.length === 0 ? (
-          /* Empty Cart State */
           <div className="rounded-3xl border border-gray-200 bg-white p-8 sm:p-14 text-center shadow-xs">
             <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-orange-50 text-orange-500 mb-5">
               <ShoppingBag className="h-10 w-10" />
@@ -211,7 +206,6 @@ export default function CartClient() {
               </Link>
             </div>
 
-            {/* Popular Items Row */}
             <div className="mt-14 pt-10 border-t border-gray-100 text-left">
               <h3 className="text-lg font-bold text-gray-900 mb-4">
                 Recommended For You
@@ -254,9 +248,8 @@ export default function CartClient() {
             </div>
           </div>
         ) : (
-          /* Active Cart State */
           <div>
-            {/* Header with Title and Clear Cart */}
+
             <div className="flex flex-wrap items-end justify-between gap-4 pb-6 border-b border-gray-200">
               <div>
                 <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 flex items-center gap-3">
@@ -285,11 +278,8 @@ export default function CartClient() {
               </button>
             </div>
 
-            {/* Main Cart Grid: Left Items List, Right Summary */}
             <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
-              {/* Items Column */}
               <div className="lg:col-span-2 space-y-4">
-                {/* Free shipping progress notification */}
                 <div className="rounded-2xl border border-orange-200 bg-orange-50/70 p-4 shadow-2xs">
                   {isFreeShipping ? (
                     <div className="flex items-center gap-2 text-xs font-bold text-emerald-700">
@@ -319,7 +309,6 @@ export default function CartClient() {
                   )}
                 </div>
 
-                {/* Items List */}
                 <div className="space-y-4">
                   {items.map((item) => {
                     const lineTotal = item.price * item.quantity;
@@ -328,9 +317,7 @@ export default function CartClient() {
                         key={item.id}
                         className="group relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 shadow-2xs hover:border-orange-200 hover:shadow-sm transition-all"
                       >
-                        {/* Image & Product Title Info */}
                         <div className="flex items-center gap-4 flex-1 min-w-0">
-                          {/* Image */}
                           <Link
                             href={`/products/${item.productId}`}
                             className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-xl overflow-hidden bg-gray-50 flex-shrink-0 border border-gray-100 group-hover:scale-105 transition-transform"
@@ -344,7 +331,6 @@ export default function CartClient() {
                             />
                           </Link>
 
-                          {/* Info */}
                           <div className="min-w-0 flex-1">
                             <span className="text-[10px] font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2 py-0.5 rounded">
                               {item.category}
@@ -370,16 +356,13 @@ export default function CartClient() {
                               </div>
                             )}
 
-                            {/* Unit Price */}
                             <p className="mt-1 text-xs text-gray-400 font-medium">
                               Unit Price: <span className="text-gray-700 font-bold">₹{item.price.toFixed(2)}</span>
                             </p>
                           </div>
                         </div>
 
-                        {/* Quantity Stepper & Line Total & Remove */}
                         <div className="flex w-full sm:w-auto items-center justify-between sm:justify-end gap-5 pt-3 sm:pt-0 border-t sm:border-t-0 border-gray-100">
-                          {/* Stepper */}
                           <div className="flex items-center rounded-xl border border-gray-200 bg-gray-50 p-0.5 shadow-2xs">
                             <button
                               type="button"
@@ -409,7 +392,6 @@ export default function CartClient() {
                             </button>
                           </div>
 
-                          {/* Line total */}
                           <div className="text-right min-w-[5rem]">
                             <span className="text-[10px] text-gray-400 block font-medium">Total</span>
                             <span className="text-base font-extrabold text-gray-900">
@@ -417,7 +399,6 @@ export default function CartClient() {
                             </span>
                           </div>
 
-                          {/* Delete Item */}
                           <button
                             type="button"
                             onClick={() => handleRemoveItem(item)}
@@ -433,14 +414,12 @@ export default function CartClient() {
                 </div>
               </div>
 
-              {/* Order Summary Column */}
               <div className="lg:col-span-1">
                 <div className="sticky top-20 rounded-3xl border border-gray-200 bg-white p-6 shadow-sm space-y-6">
                   <h3 className="text-lg font-extrabold text-gray-900 pb-3 border-b border-gray-100">
                     Order Summary
                   </h3>
 
-                  {/* Summary rows */}
                   <div className="space-y-3 text-xs sm:text-sm">
                     <div className="flex items-center justify-between text-gray-600">
                       <span>Items Subtotal ({totalCount} items)</span>
@@ -460,7 +439,6 @@ export default function CartClient() {
                       </span>
                     </div>
 
-                    {/* Applied discount row */}
                     {appliedPromo && discountAmount > 0 && (
                       <div className="flex items-center justify-between text-emerald-600 font-semibold">
                         <span className="flex items-center gap-1">
@@ -481,7 +459,6 @@ export default function CartClient() {
                     </div>
                   </div>
 
-                  {/* Promo Code Input */}
                   <div className="border-t border-gray-100 pt-5">
                     {appliedPromo ? (
                       <div className="flex items-center justify-between rounded-xl bg-emerald-50 px-3 py-2 border border-emerald-200 text-xs">
@@ -529,7 +506,6 @@ export default function CartClient() {
                     )}
                   </div>
 
-                  {/* Checkout CTA */}
                   <div className="pt-2">
                     <button
                       type="button"
@@ -551,7 +527,6 @@ export default function CartClient() {
                     </button>
                   </div>
 
-                  {/* Trust guarantees */}
                   <div className="border-t border-gray-100 pt-5 space-y-2 text-xs text-gray-500">
                     <div className="flex items-center gap-2">
                       <ShieldCheck className="h-4 w-4 text-emerald-600 flex-shrink-0" />

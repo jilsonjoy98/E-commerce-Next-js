@@ -37,7 +37,6 @@ export default function ProductDetailClient({
     product.variants && product.variants.length > 0 ? product.variants[0] : null
   );
 
-  // GallEry image 
   const [activeImage, setActiveImage] = useState<string>(
     selectedVariant?.image || product.default_image
   );
@@ -55,13 +54,11 @@ export default function ProductDetailClient({
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"description" | "specs" | "reviews">("description");
 
-  //  products wishlist 
   const [relatedWishlist, setRelatedWishlist] = useState<string[]>([]);
 
   const currentPrice = selectedVariant?.price ?? product.base_price;
   const currentStock = selectedVariant?.stock ?? 30;
 
-  // Gather all unique images for the gallery thumbnail strip
   const galleryImages = [
     product.default_image,
     ...(product.variants?.map((v) => v.image).filter(Boolean) || []),
@@ -310,7 +307,6 @@ export default function ProductDetailClient({
                   </button>
                 </div>
 
-                {/* Live Real-Time Viewer Counter (Socket.IO) */}
                 <div className="mt-4">
                   <LiveViewerBadge productId={product.id} />
                 </div>

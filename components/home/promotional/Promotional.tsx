@@ -63,7 +63,7 @@ const PROMO_SLIDES: PromoSlide[] = [
   },
 ];
 
-const AUTOPLAY_INTERVAL = 5000; // 5 seconds per slide
+const AUTOPLAY_INTERVAL = 5000; 
 
 export default function Promotional() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -92,7 +92,6 @@ export default function Promotional() {
     setProgressKey((prev) => prev + 1);
   };
 
-  // Autoplay timer
   useEffect(() => {
     if (!isPlaying || isHovered) return;
 
@@ -103,7 +102,6 @@ export default function Promotional() {
     return () => clearInterval(timer);
   }, [isPlaying, isHovered, goToNext, currentIndex]);
 
-  // Keyboard navigation
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "ArrowLeft") {
       goToPrev();
@@ -115,7 +113,6 @@ export default function Promotional() {
     }
   };
 
-  // Touch swipe handling for mobile
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
@@ -143,7 +140,6 @@ export default function Promotional() {
       aria-label="Promotional Offers"
       className="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8"
     >
-      {/* Main Carousel Card */}
       <div
         ref={containerRef}
         role="region"
@@ -158,7 +154,6 @@ export default function Promotional() {
         onTouchEnd={handleTouchEnd}
         className="group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-neutral-900 shadow-xl shadow-gray-300/40 outline-none ring-offset-2 focus-visible:ring-2 focus-visible:ring-indigo-600 select-none"
       >
-        {/* Slides Slider Track */}
         <div
           className="flex transition-transform duration-700 ease-out will-change-transform"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -189,12 +184,10 @@ export default function Promotional() {
                     className="object-cover transition-transform duration-700 group-hover/slide:scale-[1.015]"
                   />
 
-                  {/* Accessible Visually Hidden Text */}
                   <span className="sr-only">
                     {slide.title} - {slide.subtitle}. Click to {slide.ctaText}.
                   </span>
 
-                  {/* Subtle top gradient shadow for contrast */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10 pointer-events-none" />
                 </Link>
               </div>
@@ -204,7 +197,6 @@ export default function Promotional() {
 
 
 
-        {/* Navigation Arrow: Previous */}
         <button
           type="button"
           onClick={goToPrev}
@@ -214,7 +206,6 @@ export default function Promotional() {
           <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
         </button>
 
-        {/* Navigation Arrow: Next */}
         <button
           type="button"
           onClick={goToNext}
@@ -224,7 +215,6 @@ export default function Promotional() {
           <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
         </button>
 
-        {/* Bottom Control Bar (Dots + Play/Pause) */}
         <div className="absolute bottom-3 sm:bottom-5 inset-x-0 z-20 flex items-center justify-center gap-3">
           <div className="flex items-center gap-2 rounded-full bg-black/40 px-3.5 py-1.5 backdrop-blur-md border border-white/10 shadow-sm">
             {/* Dots */}
@@ -253,7 +243,6 @@ export default function Promotional() {
           </div>
         </div>
 
-        {/* Auto-slide visual progress bar */}
         {isPlaying && !isHovered && (
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-20 overflow-hidden">
             <div
@@ -267,7 +256,6 @@ export default function Promotional() {
         )}
       </div>
 
-      {/* Value Perks Strip */}
       <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
         <div className="flex items-center gap-3 rounded-xl border border-gray-100 bg-white p-3.5 shadow-sm transition hover:shadow-md">
           <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-orange-100 text-orange-600">

@@ -51,7 +51,6 @@ export default function ProductCard({
       className="group relative flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-orange-200 cursor-pointer"
     >
       <div>
-        {/* Image Container */}
         <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-gray-50">
           <Image
             src={displayImage}
@@ -61,14 +60,12 @@ export default function ProductCard({
             className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
           />
 
-          {/* Badges on Image */}
           <div className="absolute top-2.5 left-2.5 flex flex-col gap-1.5 z-10 pointer-events-none">
             <span className="inline-flex items-center rounded-full bg-black/60 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-medium text-white shadow-sm">
               {product.category}
             </span>
           </div>
 
-          {/* Wishlist Button */}
           <div className="absolute top-2.5 right-2.5 flex flex-col gap-1.5 z-10">
             <button
               type="button"
@@ -88,7 +85,6 @@ export default function ProductCard({
             </button>
           </div>
 
-          {/* Tag Overlay at bottom of image if variant selected */}
           {selectedVariant && selectedVariant.color && (
             <div className="absolute bottom-2 left-2 z-10 rounded-md bg-white/90 backdrop-blur px-2 py-0.5 text-[10px] font-semibold text-gray-700 shadow-xs">
               {selectedVariant.color}
@@ -96,7 +92,6 @@ export default function ProductCard({
           )}
         </div>
 
-        {/* Color Swatches if product has variants */}
         {product.variants && product.variants.length > 1 && (
           <div className="mt-3 flex items-center gap-1.5">
             {product.variants.map((variant) => {
@@ -127,9 +122,7 @@ export default function ProductCard({
           </div>
         )}
 
-        {/* Product Info */}
         <div className="mt-2.5">
-          {/* Rating */}
           <div className="flex items-center gap-1.5 text-xs">
             <div className="flex items-center text-amber-400">
               <Star className="h-3.5 w-3.5 fill-amber-400" />
@@ -143,7 +136,6 @@ export default function ProductCard({
             </span>
           </div>
 
-          {/* Product Name */}
           <h3
             title={product.name}
             className="mt-1.5 text-sm font-semibold text-gray-900 line-clamp-2 leading-snug group-hover:text-orange-600 transition-colors"
@@ -151,14 +143,12 @@ export default function ProductCard({
             {product.name}
           </h3>
 
-          {/* Description snippet */}
           <p className="mt-1 text-xs text-gray-500 line-clamp-1">
             {product.description}
           </p>
         </div>
       </div>
 
-      {/* Price & Add to Cart Footer */}
       <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
         <div>
           <span className="text-xs text-gray-400 block -mb-0.5 font-medium">Price</span>

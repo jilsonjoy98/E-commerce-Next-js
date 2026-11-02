@@ -24,9 +24,8 @@ export default function Navbar() {
     };
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-orange-500/20 bg-orange-400/95 backdrop-blur shadow-xs">
+        <header className="sticky top-0 z-50 w-full border-b border-orange-500/20 bg-orange-500 backdrop-blur shadow-xs">
             <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-                {/* 1. Brand Logo & Nav Links */}
                 <div className="flex items-center gap-6">
                     <Link href="/" className="flex flex-shrink-0 items-center">
                         <p className="text-2xl font-black tracking-tight text-white">
@@ -35,12 +34,7 @@ export default function Navbar() {
                     </Link>
 
                     <nav className="hidden lg:flex items-center gap-4 text-sm font-semibold text-white/90">
-                        {/* <Link
-                            href="/"
-                            className="transition-colors hover:text-white px-2 py-1 rounded-md hover:bg-white/10"
-                        >
-                            Home
-                        </Link> */}
+   
                         <Link
                             href="/products"
                             className="transition-colors hover:text-white px-2 py-1 rounded-md hover:bg-white/10"
@@ -57,7 +51,6 @@ export default function Navbar() {
                     </nav>
                 </div>
 
-                {/* 2. Desktop Search Bar */}
                 <form
                     onSubmit={handleSearchSubmit}
                     className="hidden flex-1 max-w-md md:flex items-center"
@@ -80,9 +73,8 @@ export default function Navbar() {
                     </div>
                 </form>
 
-                {/* 3. Action Icons (Cart, Account, Mobile Menu Toggle) */}
+                {/* Mobile  */}
                 <div className="flex items-center gap-3 sm:gap-4">
-                    {/* Products link for medium screens */}
                     <Link
                         href="/products"
                         className="hidden md:flex lg:hidden items-center text-sm font-semibold text-white hover:text-orange-100"
@@ -90,16 +82,14 @@ export default function Navbar() {
                         Products
                     </Link>
 
-                    {/* Account Icon */}
                     <Link
-                        href="/account"
+                        href="/"
                         className="hidden items-center gap-1.5 text-sm font-medium text-white hover:text-orange-100 sm:flex"
                     >
                         <User className="h-5 w-5" />
                         <span>Account</span>
                     </Link>
 
-                    {/* Cart Icon with Live Zustand Badge */}
                     <Link
                         href="/cart"
                         className="relative flex items-center p-1.5 text-white transition-colors hover:text-orange-100"
@@ -113,7 +103,6 @@ export default function Navbar() {
                         )}
                     </Link>
 
-                    {/* Mobile Menu Button */}
                     <button
                         type="button"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -129,7 +118,6 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {/* 4. Mobile Search Bar */}
             <div className="border-t border-white/20 px-4 py-2.5 md:hidden">
                 <form onSubmit={handleSearchSubmit} className="relative w-full">
                     <input
@@ -149,7 +137,6 @@ export default function Navbar() {
                 </form>
             </div>
 
-            {/* 5. Mobile Slide-out Menu */}
             {isMobileMenuOpen && (
                 <div className="border-t border-orange-500/30 bg-white px-5 py-4 md:hidden shadow-lg animate-in slide-in-from-top-2">
                     <nav className="flex flex-col space-y-3">
@@ -191,7 +178,7 @@ export default function Navbar() {
                             <span>Featured Deals</span>
                         </Link>
                         <Link
-                            href="/account"
+                            href="/"
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="flex items-center gap-2 pt-2 border-t border-gray-100 text-sm font-medium text-gray-700 hover:text-orange-600"
                         >
