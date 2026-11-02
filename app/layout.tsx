@@ -3,6 +3,8 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import "./globals.css";
 
+//fixing navbar build problem
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
