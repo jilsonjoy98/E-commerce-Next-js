@@ -39,7 +39,7 @@ export default function Navbar() {
                             href="/products"
                             className="transition-colors hover:text-white px-2 py-1 rounded-md hover:bg-white/10"
                         >
-                            All Products
+                            Products
                         </Link>
                         {/* <div className="hidden xl:flex items-center gap-1.5 rounded-full bg-black/15 px-2.5 py-1 text-xs font-semibold text-white/95 backdrop-blur-xs">
                             <span className="relative flex h-2 w-2">
@@ -152,7 +152,7 @@ export default function Navbar() {
                             onClick={() => setIsMobileMenuOpen(false)}
                             className="text-sm font-semibold text-gray-800 hover:text-orange-600"
                         >
-                            All Products
+                            Products
                         </Link>
                         <Link
                             href="/cart"

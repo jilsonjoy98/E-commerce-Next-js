@@ -1,4 +1,4 @@
-import { RotateCcw, ShieldCheck, Sparkles, Truck } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -53,9 +53,11 @@ export default function Categories() {
             ${category.backgroundColor}`}
                     >
                         <div className="mb-2 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3">
-                            <img
+                            <Image
                                 src={category.icon}
                                 alt={category.name}
+                                width={48}
+                                height={48}
                                 className="h-12 w-12 object-contain"
                             />
                         </div>
