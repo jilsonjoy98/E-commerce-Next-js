@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Star, Heart, Eye, ShoppingBag, Check, Sparkles } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Star, Heart, ShoppingBag, Check } from "lucide-react";
 import { Product, ProductVariant } from "@/types/product";
 
 interface ProductCardProps {
   product: Product;
-  onQuickView: (product: Product) => void;
+  onQuickView?: (product: Product) => void;
   isWishlisted: boolean;
   onToggleWishlist: (productId: string) => void;
   onAddToCart: (product: Product, variant?: ProductVariant) => void;
@@ -15,11 +16,11 @@ interface ProductCardProps {
 
 export default function ProductCard({
   product,
-  onQuickView,
   isWishlisted,
   onToggleWishlist,
   onAddToCart,
 }: ProductCardProps) {
+  const router = useRouter();
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
     product.variants && product.variants.length > 0 ? product.variants[0] : null
   );
@@ -40,14 +41,13 @@ export default function ProductCard({
     onToggleWishlist(product.id);
   };
 
-  const handleQuickViewClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    onQuickView(product);
+  const handleCardClick = () => {
+    router.push(`/products/${product.id}`);
   };
 
   return (
     <div
-      onClick={() => onQuickView(product)}
+      onClick={handleCardClick}
       className="group relative flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-orange-200 cursor-pointer"
     >
       <div>
@@ -63,18 +63,13 @@ export default function ProductCard({
 
           {/* Badges on Image */}
           <div className="absolute top-2.5 left-2.5 flex flex-col gap-1.5 z-10 pointer-events-none">
-            <span className="inline-flex items-center gap-1 rounded-full bg-orange-500/90 backdrop-blur-md px-2.5 py-0.5 text-[11px] font-semibold text-white shadow-sm">
-              <Sparkles className="h-3 w-3" />
-              Featured
-            </span>
             <span className="inline-flex items-center rounded-full bg-black/60 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-medium text-white shadow-sm">
               {product.category}
             </span>
           </div>
 
-          {/* Quick Action Buttons (Wishlist & Quick View) */}
+          {/* Wishlist Button */}
           <div className="absolute top-2.5 right-2.5 flex flex-col gap-1.5 z-10">
-            {/* Wishlist Button */}
             <button
               type="button"
               onClick={handleWishlistClick}
@@ -90,16 +85,6 @@ export default function ProductCard({
                   isWishlisted ? "fill-rose-500 text-rose-500" : ""
                 }`}
               />
-            </button>
-
-            {/* Quick View Button */}
-            <button
-              type="button"
-              onClick={handleQuickViewClick}
-              aria-label="Quick view product"
-              className="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-gray-600 backdrop-blur-md transition-all duration-200 hover:bg-white hover:text-orange-600 hover:scale-110 active:scale-95 shadow-sm opacity-90 sm:opacity-0 sm:group-hover:opacity-100"
-            >
-              <Eye className="h-4 w-4" />
             </button>
           </div>
 
@@ -120,7 +105,7 @@ export default function ProductCard({
                 <button
                   key={variant.id}
                   type="button"
-                  title={`${variant.color || variant.type} - $${variant.price}`}
+                  title={`${variant.color || variant.type} - ₹${variant.price}`}
                   onClick={(e) => {
                     e.stopPropagation();
                     setSelectedVariant(variant);
@@ -178,7 +163,7 @@ export default function ProductCard({
         <div>
           <span className="text-xs text-gray-400 block -mb-0.5 font-medium">Price</span>
           <span className="text-base sm:text-lg font-bold text-gray-900">
-            ${displayPrice.toFixed(2)}
+            ₹ {displayPrice.toFixed(2)}
           </span>
         </div>
 

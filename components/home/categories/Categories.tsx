@@ -1,35 +1,35 @@
-import { RotateCcw, ShieldCheck, Sparkles, Truck } from 'lucide-react'
-import path from 'path';
-import React from 'react'
+import { RotateCcw, ShieldCheck, Sparkles, Truck } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
 
 export default function Categories() {
     const categories = [
         {
             name: "Electronics",
-            icon: "home/categories/electronics.png",
+            icon: "/home/categories/electronics.png",
             description: "Explore the latest in electronics, from smartphones to smart home devices.",
-            path: "/categories/electronics",
+            path: "/products?category=Electronics",
             backgroundColor: "bg-blue-500"
         },
         {
             name: "Fashion",
-            icon: "home/categories/fashion.png",
+            icon: "/home/categories/fashion.png",
             description: "Discover the latest trends in fashion, from clothing to accessories.",
-            path: "/categories/fashion",
+            path: "/products?category=Fashion",
             backgroundColor: "bg-green-500"
         },
         {
             name: "Toys",
-            icon: "home/categories/toys.png",
+            icon: "/home/categories/toys.png",
             description: "Find a wide range of toys for kids of all ages, from educational toys to fun games.",
-            path: "/categories/toys",
+            path: "/products?category=Toys",
             backgroundColor: "bg-yellow-500"
         },
         {
             name: "Cosmetics",
-            icon: "home/categories/cosmetics.png",
+            icon: "/home/categories/cosmetics.png",
             description: "Take care of your skin and body with our curated selection of beauty and health products.",
-            path: "/categories/cosmetics",
+            path: "/products?category=Beauty",
             backgroundColor: "bg-pink-500"
         }
     ];
@@ -41,8 +41,9 @@ export default function Categories() {
             <h2 className="mb-4 text-2xl font-bold text-gray-900">Shop by Category</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {categories.map((category) => (
-                    <div
+                    <Link
                         key={category.name}
+                        href={category.path}
                         className={`group flex flex-col items-center justify-center p-4 
             border border-gray-200 rounded-xl
             transition-all duration-300 ease-in-out
@@ -62,10 +63,10 @@ export default function Categories() {
                         <h3 className="text-lg font-semibold text-gray-900 transition-colors duration-300 ">
                             {category.name}
                         </h3>
-                    </div>
+                    </Link>
                 ))}
             </div>
 
         </section>
-    )
+    );
 }

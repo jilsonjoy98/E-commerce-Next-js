@@ -4,14 +4,13 @@ import { useMemo, useState } from "react";
 import rawProducts from "@/data/products.json";
 import { Product, ProductVariant } from "@/types/product";
 import ProductCard from "./ProductCard";
-import QuickViewModal from "./QuickViewModal";
-import { Sparkles, SlidersHorizontal, ArrowRight, CheckCircle2 } from "lucide-react";
+import { SlidersHorizontal, ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import { useCartStore } from "@/store/useCartStore";
 
 export default function Featured() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [wishlist, setWishlist] = useState<string[]>([]);
-  const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   // Cast imported json to typed Product array and filter featured items
@@ -61,7 +60,10 @@ export default function Featured() {
     });
   };
 
+  const addItem = useCartStore((state) => state.addItem);
+
   const handleAddToCart = (product: Product, variant?: ProductVariant, quantity: number = 1) => {
+    addItem(product, variant, quantity);
     const variantDesc = variant ? ` (${variant.color || variant.type})` : "";
     showToast(`Added ${quantity > 1 ? `${quantity}x ` : ""}"${product.name}${variantDesc}" to cart`);
   };
@@ -79,10 +81,6 @@ export default function Featured() {
       {/* Header Section */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 pb-6 border-b border-gray-200">
         <div>
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-700">
-            <Sparkles className="h-3.5 w-3.5" />
-            <span>Curated Picks</span>
-          </div>
           <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900">
             Featured Products
           </h2>
@@ -142,7 +140,6 @@ export default function Featured() {
             <ProductCard
               key={product.id}
               product={product}
-              onQuickView={(p) => setQuickViewProduct(p)}
               isWishlisted={wishlist.includes(product.id)}
               onToggleWishlist={handleToggleWishlist}
               onAddToCart={handleAddToCart}
@@ -161,16 +158,6 @@ export default function Featured() {
           </button>
         </div>
       )}
-
-      {/* Quick View Modal */}
-      <QuickViewModal
-        product={quickViewProduct}
-        isOpen={!!quickViewProduct}
-        onClose={() => setQuickViewProduct(null)}
-        isWishlisted={quickViewProduct ? wishlist.includes(quickViewProduct.id) : false}
-        onToggleWishlist={handleToggleWishlist}
-        onAddToCart={handleAddToCart}
-      />
     </section>
   );
 }
