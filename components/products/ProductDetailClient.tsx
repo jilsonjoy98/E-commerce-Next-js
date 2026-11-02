@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Product, ProductVariant } from "@/types/product";
 import ProductCard from "@/components/home/featured/ProductCard";
 import { useCartStore } from "@/store/useCartStore";
+import LiveViewerBadge from "@/components/products/LiveViewerBadge";
 import {
   Star,
   Heart,
@@ -309,7 +310,12 @@ export default function ProductDetailClient({
                   </button>
                 </div>
 
-                <div className="mt-5 flex items-baseline gap-4 border-b border-gray-100 pb-5">
+                {/* Live Real-Time Viewer Counter (Socket.IO) */}
+                <div className="mt-4">
+                  <LiveViewerBadge productId={product.id} />
+                </div>
+
+                <div className="mt-4 flex items-baseline gap-4 border-b border-gray-100 pb-5">
                   <span className="text-3xl sm:text-4xl font-extrabold text-gray-900">
                     ₹ {currentPrice.toFixed(2)}
                   </span>

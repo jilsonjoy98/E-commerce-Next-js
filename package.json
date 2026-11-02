@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently -n \"next,socket\" -c \"cyan,magenta\" \"next dev\" \"node server/socket.js\"",
+    "dev:next": "next dev",
+    "socket": "node server/socket.js",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -13,6 +15,8 @@
     "next": "16.4.3",
     "react": "19.3.0",
     "react-dom": "19.3.0",
+    "socket.io": "^4.8.4",
+    "socket.io-client": "^4.8.4",
     "zustand": "^5.0.16"
   },
   "devDependencies": {
@@ -20,6 +24,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "concurrently": "^10.0.6",
     "eslint": "^9",
     "eslint-config-next": "16.4.3",
     "tailwindcss": "^4",

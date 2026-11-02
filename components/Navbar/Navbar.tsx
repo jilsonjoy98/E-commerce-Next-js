@@ -5,12 +5,14 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Search, ShoppingCart, User, Menu, X, Sparkles } from "lucide-react";
 import { useCartCount } from "@/store/useCartStore";
+// import { useTotalActiveUsers } from "@/lib/socket";
 
 export default function Navbar() {
     const [searchQuery, setSearchQuery] = useState("");
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const router = useRouter();
     const cartItemCount = useCartCount();
+    // const { activeUsers } = useTotalActiveUsers();
 
     const handleSearchSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -33,18 +35,25 @@ export default function Navbar() {
                     </Link>
 
                     <nav className="hidden lg:flex items-center gap-4 text-sm font-semibold text-white/90">
-                        <Link
+                        {/* <Link
                             href="/"
                             className="transition-colors hover:text-white px-2 py-1 rounded-md hover:bg-white/10"
                         >
                             Home
-                        </Link>
+                        </Link> */}
                         <Link
                             href="/products"
                             className="transition-colors hover:text-white px-2 py-1 rounded-md hover:bg-white/10"
                         >
                             All Products
                         </Link>
+                        {/* <div className="hidden xl:flex items-center gap-1.5 rounded-full bg-black/15 px-2.5 py-1 text-xs font-semibold text-white/95 backdrop-blur-xs">
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+                            </span>
+                            <span>{activeUsers} online</span>
+                        </div> */}
                     </nav>
                 </div>
 
