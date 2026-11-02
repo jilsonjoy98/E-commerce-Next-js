@@ -39,7 +39,7 @@ export default function Categories() {
             className="mx-auto max-w-7xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8"
         >
             <h2 className="mb-4 text-2xl font-bold text-gray-900">Shop by Category</h2>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-4">
                 {categories.map((category) => (
                     <Link
                         key={category.name}
